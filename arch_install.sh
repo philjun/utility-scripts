@@ -18,12 +18,6 @@
 #sudo ln -s dash /bin/sh
 #
 ###part3
-##printf '\033c'
-##cd $HOME
-##git clone --separate-git-dir=$HOME/.dotfiles https://github.com/bugswriter/dotfiles.git tmpdotfiles
-##rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
-##rm -r tmpdotfiles
-#
 ## dwm: Window Manager
 #echo "Installing dwm and dependencies..."
 #mkdir ~/.local/src
@@ -63,20 +57,19 @@ sudo pacman -S zsh zsh-syntax-highlighting
 #
 #cd
 #pikaur -S libxft-bgra-git yt-dlp-drop-in
+
+# Make directories
 #mkdir dl dox imp music pix pub code
+mkdir -p ~/pix/wall
+
 # # Fix dotfiles
+git clone git@github.com:philjun/.dotfiles.git ~/.dotfiles
 rm ~/.xinitrc
 ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
 rm ~/.zshrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 rm ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
-#ln -s ~/.config/shell/profile .zprofile
-#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-#mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
-#rm ~/.zshrc ~/.zsh_history
-#alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-#dots config --local status.showUntrackedFiles no
 
 # Fix resolution on dock
 sudo tee /etc/X11/xorg.conf.d/10-monitor.conf <<EOF
@@ -100,5 +93,11 @@ Section "Device"
         Driver "modesetting"
 EndSection
 EOF
+
+# get wallpapers
+git clone git@github.com:philjun/wallpapers.git ~/pix/wall
+
+# Get local bin
+git clone git@github.com:philjun/local-bin.git ~/.local/bin
 
 exit
