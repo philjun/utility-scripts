@@ -1,59 +1,99 @@
 
-pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop \
-     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
-     sxiv mpv zathura zathura-pdf-mupdf ffmpeg imagemagick  \
-     fzf man-db xwallpaper python-pywal unclutter xclip maim \
-     zip unzip unrar p7zip xdotool papirus-icon-theme brightnessctl  \
-     dosfstools ntfs-3g git sxhkd zsh pipewire pipewire-pulse \
-     emacs-nox arc-gtk-theme rsync qutebrowser dash \
-     xcompmgr libnotify dunst slock jq aria2 cowsay \
-     dhcpcd connman wpa_supplicant rsync pamixer mpd ncmpcpp \
-     zsh-syntax-highlighting xdg-user-dirs libconfig \
-     bluez bluez-utils libxft libxinerama openssh
+#pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop \
+#     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
+#     sxiv mpv zathura zathura-pdf-mupdf ffmpeg imagemagick  \
+#     fzf man-db xwallpaper python-pywal unclutter xclip maim \
+#     zip unzip unrar p7zip xdotool papirus-icon-theme brightnessctl  \
+#     dosfstools ntfs-3g git sxhkd zsh pipewire pipewire-pulse \
+#     emacs-nox arc-gtk-theme rsync qutebrowser dash \
+#     xcompmgr libnotify dunst slock jq aria2 cowsay \
+#     dhcpcd connman wpa_supplicant rsync pamixer mpd ncmpcpp \
+#     zsh-syntax-highlighting xdg-user-dirs libconfig \
+#     bluez bluez-utils libxft libxinerama openssh
 
 #systemctl enable connman.service 
-rm /bin/sh
-ln -s dash /bin/sh
+#echo "Replacing sh with dash..."
+#sudo pacman -S dash
+#sudo rm /bin/sh
+#sudo ln -s dash /bin/sh
+#
+###part3
+##printf '\033c'
+##cd $HOME
+##git clone --separate-git-dir=$HOME/.dotfiles https://github.com/bugswriter/dotfiles.git tmpdotfiles
+##rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
+##rm -r tmpdotfiles
+#
+## dwm: Window Manager
+#echo "Installing dwm and dependencies..."
+#mkdir ~/.local/src
+#git clone --depth=1 git@github.com:philjun/dwm.git ~/.local/src/dwm
+#sudo make -C ~/.local/src/dwm install
+#sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xdg-user-dirs xf86-video-intel
+#sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels
+##
+### st: Terminal
+#echo "Installing st and dependencies..."
+#git clone --depth=1 git@github.com:philjun/st.git ~/.local/src/st
+#sudo make -C ~/.local/src/st install
+##
+### dmenu: Program Menu
+#echo "Installing dmenu and dependencies..."
+#git clone --depth=1 git@github.com:philjun/dmenu.git ~/.local/src/dmenu
+#sudo make -C ~/.local/src/dmenu install
 
-#part3
-printf '\033c'
-cd $HOME
-git clone --separate-git-dir=$HOME/.dotfiles https://github.com/bugswriter/dotfiles.git tmpdotfiles
-rsync --recursive --verbose --exclude '.git' tmpdotfiles/ $HOME/
-rm -r tmpdotfiles
-# dwm: Window Manager
-git clone --depth=1 https://github.com/Bugswriter/dwm.git ~/.local/src/dwm
-sudo make -C ~/.local/src/dwm install
+# paru: AUR helper
+#git clone https://aur.archlinux.org/paru.git
+#cd paru
+#makepkg -si
 
-# st: Terminal
-git clone --depth=1 https://github.com/Bugswriter/st.git ~/.local/src/st
-sudo make -C ~/.local/src/st install
+# Wallpaper and shell ricing
+sudo pacman -S xwallpaper xcompmgr python-pywal
+sudo pacman -S zsh zsh-syntax-highlighting
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
+#
+## dmenu: Dmenu based Password Prompt
+#git clone --depth=1 https://github.com/ritze/pinentry-dmenu.git ~/.local/src/pinentry-dmenu
+#sudo make -C ~/.local/src/pinentry-dmenu clean install
+#
+## dwmblocks: Status bar for dwm
+#git clone --depth=1 https://github.com/bugswriter/dwmblocks.git ~/.local/src/dwmblocks
+#sudo make -C ~/.local/src/dwmblocks install
+#
+#cd
+#pikaur -S libxft-bgra-git yt-dlp-drop-in
+#mkdir dl dox imp music pix pub code
+#
+ln -s ~/.config/x11/xinitrc ~/.xinitrc
+#ln -s ~/.config/shell/profile .zprofile
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
+#rm ~/.zshrc ~/.zsh_history
+#alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#dots config --local status.showUntrackedFiles no
 
-# dmenu: Program Menu
-git clone --depth=1 https://github.com/Bugswriter/dmenu.git ~/.local/src/dmenu
-sudo make -C ~/.local/src/dmenu install
+# Fix resolution on dock
+sudo tee /etc/X11/xorg.conf.d/10-monitor.conf <<EOF
+Section "Monitor"
+        Identifier "HDMI-1"
+        Modeline "2560x1440_60.00"  312.25  2560 2752 3024 3488  1440 1443 1448 1493 -hsync +vsync
+        Option "PreferredMode" "2560x1440_60.00"
+EndSection
 
-# dmenu: Dmenu based Password Prompt
-git clone --depth=1 https://github.com/ritze/pinentry-dmenu.git ~/.local/src/pinentry-dmenu
-sudo make -C ~/.local/src/pinentry-dmenu clean install
+Section "Screen"
+        Identifier "Screen0"
+        Monitor "HDMI-1"
+        DefaultDepth 24
+        SubSection "Display"
+                Modes "2560x1440_60.00"
+        EndSubSection
+EndSection
 
-# dwmblocks: Status bar for dwm
-git clone --depth=1 https://github.com/bugswriter/dwmblocks.git ~/.local/src/dwmblocks
-sudo make -C ~/.local/src/dwmblocks install
+Section "Device"
+        Identifier "Device0"
+        Driver "modesetting"
+EndSection
+EOF
 
-# pikaur: AUR helper
-git clone https://aur.archlinux.org/pikaur.git
-cd pikaur
-makepkg -fsri
-cd
-pikaur -S libxft-bgra-git yt-dlp-drop-in
-mkdir dl dox imp music pix pub code
-
-ln -s ~/.config/x11/xinitrc .xinitrc
-ln -s ~/.config/shell/profile .zprofile
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
-rm ~/.zshrc ~/.zsh_history
-alias dots='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-dots config --local status.showUntrackedFiles no
 exit
