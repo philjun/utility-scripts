@@ -64,8 +64,13 @@ sudo pacman -S zsh zsh-syntax-highlighting
 #cd
 #pikaur -S libxft-bgra-git yt-dlp-drop-in
 #mkdir dl dox imp music pix pub code
-#
-ln -s ~/.config/x11/xinitrc ~/.xinitrc
+# # Fix dotfiles
+rm ~/.xinitrc
+ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
+rm ~/.zshrc
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+rm ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
+ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 #ln -s ~/.config/shell/profile .zprofile
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
