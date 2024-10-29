@@ -13,15 +13,15 @@
 #
 
 # Install general utility programs
-sudo pacman -S \
-	less \
-	htop \
-	neofetch `#Pretty print system info` \
-	openssh \
-	zip \
-	unzip \
-	unrar \
-	maim # Screenshots
+#sudo pacman -S \
+#	less \
+#	htop \
+#	neofetch `#Pretty print system info` \
+#	openssh \
+#	zip \
+#	unzip \
+#	unrar \
+#	maim # Screenshots
 
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
@@ -29,7 +29,7 @@ sudo pacman -S \
 #sudo ln -s dash /bin/sh
 #
 # dwm: Window Manager
-#echo "Installing dwm and dependencies..."
+#echo "Installing dwm X-server and dependencies..."
 #sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xdg-user-dirs xdotool
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels
 #sudo pacman -S libxft libxinerama
@@ -46,15 +46,6 @@ sudo pacman -S \
 #echo "Installing dmenu and dependencies..."
 #git clone --depth=1 git@github.com:philjun/dmenu.git ~/.local/src/dmenu
 #sudo make -C ~/.local/src/dmenu install
-
-# paru: AUR helper
-#git clone https://aur.archlinux.org/paru.git ~/paru
-#cd ~/paru
-#makepkg -si
-
-## dmenu: Dmenu based Password Prompt
-#git clone --depth=1 https://github.com/ritze/pinentry-dmenu.git ~/.local/src/pinentry-dmenu
-#sudo make -C ~/.local/src/pinentry-dmenu clean install
 #
 ## dwmblocks: Status bar for dwm
 #git clone --depth=1 https://github.com/bugswriter/dwmblocks.git ~/.local/src/dwmblocks
@@ -67,7 +58,12 @@ sudo pacman -S \
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
 #
 
-# Make directories
+# paru: AUR helper
+#git clone https://aur.archlinux.org/paru.git ~/paru
+#cd ~/paru
+#makepkg -si
+
+# Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
 
@@ -85,7 +81,6 @@ sudo pacman -S \
 
 # Get local bin
 #git clone git@github.com:philjun/local-bin.git ~/.local/bin
-
 
 
 
@@ -113,5 +108,10 @@ sudo pacman -S \
 #EndSection
 #EOF
 
+
+# TODO! Should I use this:
+## dmenu: Dmenu based Password Prompt
+#git clone --depth=1 https://github.com/ritze/pinentry-dmenu.git ~/.local/src/pinentry-dmenu
+#sudo make -C ~/.local/src/pinentry-dmenu clean install
 
 exit
