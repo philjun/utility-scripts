@@ -10,14 +10,24 @@
 #     dhcpcd connman wpa_supplicant rsync pamixer mpd ncmpcpp \
 #     zsh-syntax-highlighting xdg-user-dirs libconfig \
 #     bluez bluez-utils libxft libxinerama openssh
+#
 
-#systemctl enable connman.service 
+# Install general utility programs
+sudo pacman -S \
+	less \
+	htop \
+	neofetch `#Pretty print system info` \
+	openssh \
+	zip \
+	unzip \
+	unrar \
+	maim # Screenshots
+
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
 #sudo rm /bin/sh
 #sudo ln -s dash /bin/sh
 #
-##part3
 # dwm: Window Manager
 #echo "Installing dwm and dependencies..."
 #sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xdg-user-dirs xdotool
