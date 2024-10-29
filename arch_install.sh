@@ -48,7 +48,7 @@
 #sudo make -C ~/.local/src/dmenu install
 #
 ## dwmblocks: Status bar for dwm
-#git clone --depth=1 https://github.com/bugswriter/dwmblocks.git ~/.local/src/dwmblocks
+#git clone --depth=1 git@github.com:philjun/dwmblocks.git ~/.local/src/dwmblocks
 #sudo make -C ~/.local/src/dwmblocks install
 
 # Wallpaper and shell ricing
@@ -56,7 +56,6 @@
 #sudo pacman -S zsh zsh-syntax-highlighting
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
-#
 
 # paru: AUR helper
 #git clone https://aur.archlinux.org/paru.git ~/paru
