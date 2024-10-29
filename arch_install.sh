@@ -54,16 +54,18 @@
 #git clone --depth=1 git@github.com:philjun/dwmblocks.git ~/.local/src/dwmblocks
 #sudo make -C ~/.local/src/dwmblocks install
 
+# paru: AUR helper
+#git clone https://aur.archlinux.org/paru.git ~/.paru
+#cd ~/.paru
+#makepkg -si
+
 # Wallpaper and shell ricing
-#sudo pacman -S xwallpaper xcompmgr python-pywal
+#paru -S python-pywal16
+#sudo pacman -S xwallpaper xcompmgr
 #sudo pacman -S zsh zsh-syntax-highlighting
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
 
-# paru: AUR helper
-#git clone https://aur.archlinux.org/paru.git ~/paru
-#cd ~/paru
-#makepkg -si
 
 # Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
