@@ -12,6 +12,9 @@
 #     bluez bluez-utils libxft libxinerama openssh
 #
 
+# Install fonts
+#sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
+
 # Install general utility programs
 #sudo pacman -S \
 #	less \
@@ -21,7 +24,8 @@
 #	zip \
 #	unzip \
 #	unrar \
-#	maim # Screenshots
+#	maim `#Screenshots` \
+#	qutebrowser `#Vim-like browser`
 
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
@@ -31,7 +35,6 @@
 # dwm: Window Manager
 #echo "Installing dwm X-server and dependencies..."
 #sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xdg-user-dirs xdotool
-#sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels
 #sudo pacman -S libxft libxinerama
 #mkdir ~/.local/src
 #git clone --depth=1 git@github.com:philjun/dwm.git ~/.local/src/dwm
