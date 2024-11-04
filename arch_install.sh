@@ -125,10 +125,7 @@
 # mv ~/.cache/nvim{,.bak}
 
 # Clone starter repo
-# git clone https://github.com/LazyVim/starter ~/.config/nvim
-
-# Remove .git folder so it can be added to own repo later
-# rm -rf ~/.config/nvim/.git
+# git clone hgit@github.com:philjun/lazyvim.git ~/.config/nvim
 
 #### Lazyvim done #####
 
