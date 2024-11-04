@@ -1,4 +1,3 @@
-
 #pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop \
 #     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 #     sxiv mpv zathura zathura-pdf-mupdf ffmpeg imagemagick  \
@@ -14,6 +13,9 @@
 
 # Install fonts
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
+# Nerd fonts tool
+#paru -S getnf
+#getnf -i JetBrainsMono
 
 # Install general utility programs
 #sudo pacman -S \
@@ -66,7 +68,6 @@
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
 
-
 # Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
@@ -85,9 +86,6 @@
 
 # Get local bin
 #git clone git@github.com:philjun/local-bin.git ~/.local/bin
-
-
-
 
 # Fix resolution on dock
 #sudo tee /etc/X11/xorg.conf.d/10-monitor.conf <<EOF
@@ -112,6 +110,27 @@
 #EndSection
 #EOF
 
+#### Lazyvim ####
+# Dependencies
+# sudo pacman -S lazygit gcc ripgrep fd
+# paru -S libstdc++5
+
+# Backing up existing configuration
+# required
+# mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+# mv ~/.local/share/nvim{,.bak}
+# mv ~/.local/state/nvim{,.bak}
+# mv ~/.cache/nvim{,.bak}
+
+# Clone starter repo
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
+
+# Remove .git folder so it can be added to own repo later
+# rm -rf ~/.config/nvim/.git
+
+#### Lazyvim done #####
 
 # TODO! Should I use this:
 ## dmenu: Dmenu based Password Prompt
