@@ -72,6 +72,9 @@
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
 
+# Clone into progcomp code
+# git clone git@github.com:philjun/progcomp.git code/progcomp
+
 # # Fix dotfiles
 #git clone git@github.com:philjun/.dotfiles.git ~/.dotfiles
 #rm ~/.xinitrc
