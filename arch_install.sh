@@ -26,6 +26,7 @@
 #	zip \
 #	unzip \
 #	unrar \
+#	npm \
 #	maim `#Screenshots` \
 #	qutebrowser `#Vim-like browser`
 
