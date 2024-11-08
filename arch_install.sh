@@ -130,6 +130,9 @@
 # Clone starter repo
 # git clone hgit@github.com:philjun/lazyvim.git ~/.config/nvim
 
+# USe personalized pywal16 colors in lazyvim
+# git clone git@github.com:philjun/pywal16.nvim.git ~/.local/share/nvim/lazy/pywal16.nvim
+
 #### Lazyvim done #####
 
 # TODO! Should I use this:
