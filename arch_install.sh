@@ -1,4 +1,4 @@
-#pacman -S --noconfirm xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop \
+#pa
 #     noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-jetbrains-mono ttf-joypixels ttf-font-awesome \
 #     sxiv mpv zathura zathura-pdf-mupdf ffmpeg imagemagick  \
 #     fzf man-db xwallpaper python-pywal unclutter xclip maim \
@@ -56,6 +56,11 @@
 ## dwmblocks: Status bar for dwm
 #git clone --depth=1 git@github.com:philjun/dwmblocks.git ~/.local/src/dwmblocks
 #sudo make -C ~/.local/src/dwmblocks install
+
+## sent: Simple plaintext presentation tool
+paru -S farbfeld-git
+git clone --depth=1 git@github.com:philjun/sent.git ~/.local/src/sent
+sudo make -C ~/.local/src/sent install
 
 # paru: AUR helper
 #git clone https://aur.archlinux.org/paru.git ~/.paru
