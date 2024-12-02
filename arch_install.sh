@@ -23,6 +23,7 @@
 #	htop \
 #	neofetch `#Pretty print system info` \
 #	openssh \
+#	man-db `#Man pages` \
 #	zip \
 #	unzip \
 #	unrar \
