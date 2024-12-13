@@ -27,6 +27,7 @@
 #	zip \
 #	unzip \
 #	unrar \
+#	tmux \
 #	npm \
 #	maim `#Screenshots` \
 #	qutebrowser `#Vim-like browser`
@@ -59,9 +60,9 @@
 #sudo make -C ~/.local/src/dwmblocks install
 
 ## sent: Simple plaintext presentation tool
-paru -S farbfeld-git
-git clone --depth=1 git@github.com:philjun/sent.git ~/.local/src/sent
-sudo make -C ~/.local/src/sent install
+# paru -S farbfeld-git
+# git clone --depth=1 git@github.com:philjun/sent.git ~/.local/src/sent
+# sudo make -C ~/.local/src/sent install
 
 # paru: AUR helper
 #git clone https://aur.archlinux.org/paru.git ~/.paru
@@ -90,6 +91,8 @@ sudo make -C ~/.local/src/sent install
 #ln -s ~/.dotfiles/.zshrc ~/.zshrc
 #rm ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 #ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
+#mkdir ~/.config/tmux
+#ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 
 # get wallpapers
 #git clone git@github.com:philjun/wallpapers.git ~/pix/wall
