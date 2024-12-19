@@ -73,7 +73,6 @@
 # git clone --depth=1 git@github.com:philjun/sent.git ~/.local/src/sent
 # sudo make -C ~/.local/src/sent install
 
-
 ## Wallpaper and shell ricing
 #paru -S python-pywal16
 #sudo pacman -S xwallpaper xcompmgr
@@ -107,11 +106,11 @@
 
 #### Lazyvim ####
 # Dependencies
-#sudo pacman -S lazygit gcc ripgrep fd
+#sudo pacman -S neovim lazygit gcc ripgrep fd
 #paru -S libstdc++5
 #
-## Backing up existing configuration
-## required
+# Backing up existing configuration
+# required
 #mv ~/.config/nvim{,.bak}
 #
 ## optional but recommended
@@ -120,9 +119,9 @@
 #mv ~/.cache/nvim{,.bak}
 #
 ## Clone starter repo
-#git clone hgit@github.com:philjun/lazyvim.git ~/.config/nvim
-#
-## Use personalized pywal16 colors in lazyvim
+#git clone git@github.com:philjun/lazyvim.git ~/.config/nvim
+
+# Use personalized pywal16 colors in lazyvim
 #git clone git@github.com:philjun/pywal16.nvim.git ~/.local/share/nvim/lazy/pywal16.nvim
 
 #### Lazyvim done #####
@@ -149,7 +148,6 @@
 #        Driver "modesetting"
 #EndSection
 #EOF
-
 
 # TODO! Should I use this:
 ## dmenu: Dmenu based Password Prompt
