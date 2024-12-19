@@ -11,13 +11,10 @@
 #     bluez bluez-utils libxft libxinerama openssh
 #
 
-# Install fonts
+## Install fonts
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
-# Nerd fonts tool
-#paru -S getnf
-#getnf -i JetBrainsMono
-
-# Install general utility programs
+#
+## Install general utility programs
 #sudo pacman -S \
 #	less \
 #	htop \
@@ -31,20 +28,30 @@
 #	npm \
 #	maim `#Screenshots` \
 #	qutebrowser `#Vim-like browser`
-
+#
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
 #sudo rm /bin/sh
 #sudo ln -s dash /bin/sh
+
+## paru: AUR helper
+#git clone https://aur.archlinux.org/paru.git ~/.paru
+#cd ~/.paru
+#makepkg -si
+
+## Nerd fonts tool
+#paru -S getnf
+#getnf -i JetBrainsMono
+
 #
-# dwm: Window Manager
+## dwm: Window Manager
 #echo "Installing dwm X-server and dependencies..."
 #sudo pacman -S xorg-server xorg-xinit xorg-xkill xorg-xsetroot xorg-xbacklight xorg-xprop xdg-user-dirs xdotool
 #sudo pacman -S libxft libxinerama
 #mkdir ~/.local/src
 #git clone --depth=1 git@github.com:philjun/dwm.git ~/.local/src/dwm
 #sudo make -C ~/.local/src/dwm install
-##
+#
 ## st: Terminal
 #echo "Installing st and dependencies..."
 #git clone --depth=1 git@github.com:philjun/st.git ~/.local/src/st
@@ -56,34 +63,32 @@
 #sudo make -C ~/.local/src/dmenu install
 #
 ## dwmblocks: Status bar for dwm
+#echo "Installing dwmblocks and dependencies..."
 #git clone --depth=1 git@github.com:philjun/dwmblocks.git ~/.local/src/dwmblocks
 #sudo make -C ~/.local/src/dwmblocks install
-
+#
 ## sent: Simple plaintext presentation tool
+#echo "Installing sent and dependencies..."
 # paru -S farbfeld-git
 # git clone --depth=1 git@github.com:philjun/sent.git ~/.local/src/sent
 # sudo make -C ~/.local/src/sent install
 
-# paru: AUR helper
-#git clone https://aur.archlinux.org/paru.git ~/.paru
-#cd ~/.paru
-#makepkg -si
 
-# Wallpaper and shell ricing
+## Wallpaper and shell ricing
 #paru -S python-pywal16
 #sudo pacman -S xwallpaper xcompmgr
 #sudo pacman -S zsh zsh-syntax-highlighting
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #mv ~/.oh-my-zsh ~/.config/zsh/oh-my-zsh
-
-# Create directories
+#
+## Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
-
-# Clone into progcomp code
-# git clone git@github.com:philjun/progcomp.git code/progcomp
-
-# # Fix dotfiles
+#
+## Clone into progcomp code
+#git clone git@github.com:philjun/progcomp.git code/progcomp
+#
+## Fix dotfiles
 #git clone git@github.com:philjun/.dotfiles.git ~/.dotfiles
 #rm ~/.xinitrc
 #ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
@@ -93,11 +98,11 @@
 #ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 #mkdir ~/.config/tmux
 #ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
-
-# get wallpapers
+#
+## get wallpapers
 #git clone git@github.com:philjun/wallpapers.git ~/pix/wall
-
-# Get local bin
+#
+## Get local bin
 #git clone git@github.com:philjun/local-bin.git ~/.local/bin
 
 # Fix resolution on dock
