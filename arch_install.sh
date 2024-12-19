@@ -86,7 +86,7 @@
 #mkdir -p ~/pix/wall
 #
 ## Clone into progcomp code
-#git clone git@github.com:philjun/progcomp.git code/progcomp
+#git clone git@github.com:philjun/progcomp.git ~/code/progcomp
 #
 ## Fix dotfiles
 #git clone git@github.com:philjun/.dotfiles.git ~/.dotfiles
@@ -104,6 +104,28 @@
 #
 ## Get local bin
 #git clone git@github.com:philjun/local-bin.git ~/.local/bin
+
+#### Lazyvim ####
+# Dependencies
+#sudo pacman -S lazygit gcc ripgrep fd
+#paru -S libstdc++5
+#
+## Backing up existing configuration
+## required
+#mv ~/.config/nvim{,.bak}
+#
+## optional but recommended
+#mv ~/.local/share/nvim{,.bak}
+#mv ~/.local/state/nvim{,.bak}
+#mv ~/.cache/nvim{,.bak}
+#
+## Clone starter repo
+#git clone hgit@github.com:philjun/lazyvim.git ~/.config/nvim
+#
+## Use personalized pywal16 colors in lazyvim
+#git clone git@github.com:philjun/pywal16.nvim.git ~/.local/share/nvim/lazy/pywal16.nvim
+
+#### Lazyvim done #####
 
 # Fix resolution on dock
 #sudo tee /etc/X11/xorg.conf.d/10-monitor.conf <<EOF
@@ -128,27 +150,6 @@
 #EndSection
 #EOF
 
-#### Lazyvim ####
-# Dependencies
-# sudo pacman -S lazygit gcc ripgrep fd
-# paru -S libstdc++5
-
-# Backing up existing configuration
-# required
-# mv ~/.config/nvim{,.bak}
-
-# optional but recommended
-# mv ~/.local/share/nvim{,.bak}
-# mv ~/.local/state/nvim{,.bak}
-# mv ~/.cache/nvim{,.bak}
-
-# Clone starter repo
-# git clone hgit@github.com:philjun/lazyvim.git ~/.config/nvim
-
-# USe personalized pywal16 colors in lazyvim
-# git clone git@github.com:philjun/pywal16.nvim.git ~/.local/share/nvim/lazy/pywal16.nvim
-
-#### Lazyvim done #####
 
 # TODO! Should I use this:
 ## dmenu: Dmenu based Password Prompt
