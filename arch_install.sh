@@ -24,6 +24,7 @@
 #	zip \
 #	unzip \
 #	unrar \
+#	fzf \
 #	tmux \
 #	npm \
 #	maim `#Screenshots` \
@@ -125,6 +126,27 @@
 #git clone git@github.com:philjun/pywal16.nvim.git ~/.local/share/nvim/lazy/pywal16.nvim
 
 #### Lazyvim done #####
+
+###### Laptop specific #####
+## Battery management
+#sudo pacman -S tlp
+#sudo systemctl enable tlp.service
+#sudo systemctl start tlp.service
+#sudo systemctl mask systemd-rfkill.socket
+#sudo systemctl mask systemd-rfkill.service
+#
+## CPU power management
+#sudo pacman -S cpupower
+#echo 'GOVERNOR="schedutil"' | sudo tee -a /etc/default/cpupower
+#sudo systemctl enable cpupower --now
+
+# Swap management
+#echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.conf
+#sudo sysctl -p
+
+# Power consumption monitor
+#sudo pacman -S powertop
+#sudo powertop --auto-tune
 
 # Fix resolution on dock
 #sudo tee /etc/X11/xorg.conf.d/10-monitor.conf <<EOF
