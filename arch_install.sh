@@ -15,20 +15,21 @@
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
 #
 ## Install general utility programs
-#sudo pacman -S \
-#	less \
-#	htop \
-#	neofetch `#Pretty print system info` \
-#	openssh \
-#	man-db `#Man pages` \
-#	zip \
-#	unzip \
-#	unrar \
-#	fzf \
-#	tmux \
-#	npm \
-#	maim `#Screenshots` \
-#	qutebrowser `#Vim-like browser`
+sudo pacman -S \
+  less \
+  htop \
+  neofetch `#Pretty print system info` \
+  openssh \
+  man-db `#Man pages` \
+  zathura zathura-pdf-mupdf `#Document viewer` \
+  zip \
+  unzip \
+  unrar \
+  fzf \
+  tmux \
+  npm \
+  maim `#Screenshots` \
+  qutebrowser `#Vim-like browser`
 #
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
@@ -96,8 +97,8 @@
 #ln -s ~/.dotfiles/.zshrc ~/.zshrc
 #rm ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 #ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
-#mkdir ~/.config/tmux
-#ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
+# mkdir ~/.config/tmux
+# ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
 #
 ## get wallpapers
 #git clone git@github.com:philjun/wallpapers.git ~/pix/wall
