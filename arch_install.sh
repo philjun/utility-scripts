@@ -85,10 +85,13 @@ sudo pacman -S \
 ## Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
-#
+
 ## Clone into progcomp code
 #git clone git@github.com:philjun/progcomp.git ~/code/progcomp
-#
+
+## Clone into cs books
+#git clone git@github.com:philjun/cs-books.git ~/dox/books/cs
+
 ## Fix dotfiles
 #git clone git@github.com:philjun/.dotfiles.git ~/.dotfiles
 #rm ~/.xinitrc
