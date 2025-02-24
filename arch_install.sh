@@ -13,6 +13,7 @@
 
 ## Install fonts
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
+<<<<<<< HEAD
 #
 ## Install general utility programs
 sudo pacman -S \
@@ -31,6 +32,28 @@ sudo pacman -S \
   maim `#Screenshots` \
   qutebrowser `#Vim-like browser`
 #
+=======
+# Nerd fonts tool
+#paru -S getnf
+#getnf -i JetBrainsMono
+
+# Install general utility programs
+#sudo pacman -S \
+#	less \
+#	htop \
+#	neofetch `#Pretty print system info` \
+#	openssh \
+#	man-db `#Man pages` \
+#	zip \
+#	unzip \
+#	unrar \
+#	tmux \
+#	npm \
+#	isync `#sync mail to local folder`\
+#	maim `#Screenshots` \
+#	qutebrowser `#Vim-like browser`
+
+>>>>>>> 1b4d5e5 (Add isync to enable local mail sync)
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
 #sudo rm /bin/sh
@@ -85,6 +108,7 @@ sudo pacman -S \
 ## Create directories
 #mkdir ~/dl ~/dox ~/music ~/code
 #mkdir -p ~/pix/wall
+#mkdir -p ~/.mail/gmail
 
 ## Clone into progcomp code
 #git clone git@github.com:philjun/progcomp.git ~/code/progcomp
@@ -100,10 +124,11 @@ sudo pacman -S \
 #ln -s ~/.dotfiles/.zshrc ~/.zshrc
 #rm ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
 #ln -s ~/.dotfiles/.oh-my-zsh/themes/alanpeabody.zsh-theme ~/.oh-my-zsh/themes/alanpeabody.zsh-theme
-# mkdir ~/.config/tmux
-# ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
-#
-## get wallpapers
+#mkdir ~/.config/tmux
+#ln -s ~/.dotfiles/tmux.conf ~/.config/tmux/tmux.conf
+#ln -s ~/.dotfiles/.mbsyncrc ~/.mbsyncrc
+
+# get wallpapers
 #git clone git@github.com:philjun/wallpapers.git ~/pix/wall
 #
 ## Get local bin
