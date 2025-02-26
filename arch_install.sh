@@ -13,26 +13,6 @@
 
 ## Install fonts
 #sudo pacman -S ttf-jetbrains-mono ttf-font-awesome ttf-joypixels noto-fonts noto-fonts-emoji noto-fonts-cjk
-<<<<<<< HEAD
-#
-## Install general utility programs
-sudo pacman -S \
-  less \
-  htop \
-  neofetch `#Pretty print system info` \
-  openssh \
-  man-db `#Man pages` \
-  zathura zathura-pdf-mupdf `#Document viewer` \
-  zip \
-  unzip \
-  unrar \
-  fzf \
-  tmux \
-  npm \
-  maim `#Screenshots` \
-  qutebrowser `#Vim-like browser`
-#
-=======
 # Nerd fonts tool
 #paru -S getnf
 #getnf -i JetBrainsMono
@@ -50,10 +30,12 @@ sudo pacman -S \
 #	tmux \
 #	npm \
 #	isync `#sync mail to local folder`\
+#	notmuch `#smail index and db`\
+#	aerc `#mail client`\
+#	w3m `#text-based web browser`\
 #	maim `#Screenshots` \
 #	qutebrowser `#Vim-like browser`
 
->>>>>>> 1b4d5e5 (Add isync to enable local mail sync)
 #echo "Replacing sh with dash..."
 #sudo pacman -S dash
 #sudo rm /bin/sh
